@@ -1,20 +1,22 @@
-<div class="container mt-5 bg-info">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="container-fluid" style="background-color: #F1F1F1;">
+  <div class="container py-5" id="catalog">
+    <div class="row row-cols-1 row-cols-md-4">
 
-    <div *ngFor="let recipe of recipes">
-      <div class="col">
-        <div class="card">
-          <img src="{{recipe.image}}" class="card-img-top" alt="{{recipe.name}}">
-          <div class="card-body">
-            <h5 class="card-title">{{recipe.name}}</h5>
-            <p class="card-text">{{recipe.description}}</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary"><a href="">Ver más...</a></small>
+      <div *ngFor="let recipe of recipes">
+        <div class="col py-1 m-0">
+          <div class="card">
+            <img src="{{recipe.image}}" class="card-img-top" alt="{{recipe.name}}" width="290" height="300">
+            <div class="card-body">
+              <h5 class="card-title fw-bold fst-italic text-truncate text-sm">{{recipe.name}}</h5>
+              <p class="card-text fs-6">{{recipe.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="card-info"><a class="link-primary" (click)="viewMore(recipe.name)">Ver más...</a></small>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>

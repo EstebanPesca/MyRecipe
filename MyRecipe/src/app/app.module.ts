@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { CatalogComponent } from './views/catalog/catalog.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { FooterComponent } from './templates/footer/footer.component';
+import { DescriptionComponent } from './views/description/description.component';
+import { CatalogCarouselComponent } from './views/catalog-carousel/catalog-carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CatalogComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DescriptionComponent,
+    CatalogCarouselComponent
   ],
   imports: [
     BrowserModule,
