@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { contentCatalog } from 'src/app/constants/data';
+import { CatalogInfoService } from 'src/app/services/catalog/catalog-info.service';
 
 @Component({
   selector: 'app-catalog-carousel',
@@ -8,8 +10,13 @@ import { contentCatalog } from 'src/app/constants/data';
 })
 export class CatalogCarouselComponent {
 
-  constructor(){}
-
   public recipes = contentCatalog;
+
+  constructor(private router:Router, private service:CatalogInfoService){}
+
+  public moreDescription(info: string){
+    this.router.navigateByUrl('/catalog');
+    this.service.sendInfo(info);
+  }
 
 }

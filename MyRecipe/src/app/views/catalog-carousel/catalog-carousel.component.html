@@ -1,4 +1,4 @@
-<div class="container-fluid py-3 bg-dark">
+<div class="container-fluid py-3" style="background-color: #F1F1F1;">
 
   <div class="container-fluid">
     <nav aria-label="breadcrumb">
@@ -8,34 +8,40 @@
     </nav>
   </div>
 
-  <div class="container py-5 bg-info">
+  <div class="container p-0">
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide">
 
-      <ol class="carousel-indicators">
-        <li data-target="carouselExampleCaptions" *ngFor="let recipe of recipes; let i = index" [attr.data-slide-to]="i" ngClass="{ 'active': i === 0 }"></li>
-      </ol>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions"
+        [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"
+        *ngFor="let recipe of recipes; let i = index" [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 0 }"></button>
+      </div>
 
-      <div class="carousel-inner">
-        <div class="carousel-item" *ngFor="let recipe of recipes; let i = index" ngClass="{ 'active': i === 0 }">
-          <img src="{{recipe.image}}" class="d-block w-100" alt="{{recipe.name}}">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>{{recipe.name}}</h5>
+
+
+      <div class="carousel-inner bg-dark p-0 m-0">
+        <div class="carousel-item" *ngFor="let recipe of recipes; let i = index" [ngClass]="{ 'active': i === 0 }" style="height: 70vh;">
+          <img [src]="recipe.image" class="d-block h-100 my-0 mx-auto" alt="{{recipe.name}}">
+          <div class="carousel-caption d-md-block bg-dark" style="--bs-bg-opacity: .5;">
+            <h5 class="opacity-100">{{recipe.name}}</h5>
             <p>{{recipe.description}}</p>
+            <a class="btn btn-dark" (click)="moreDescription(recipe.name)">Leer más...</a>
           </div>
         </div>
       </div>
 
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-      </a>
+        <span class="visually-hidden">Next</span>
+      </button>
 
     </div>
 
   </div>
+
 </div>
