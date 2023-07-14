@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { contentCatalog } from 'src/app/constants/data';
+import { CatalogInfoService } from 'src/app/services/catalog/catalog-info.service';
 
 @Component({
   selector: 'app-catalog',
@@ -9,12 +10,13 @@ import { contentCatalog } from 'src/app/constants/data';
 })
 export class CatalogComponent {
 
-  constructor (private router:Router){}
-
   public recipes = contentCatalog;
+
+  constructor (private router:Router, private service:CatalogInfoService){}
 
   public viewMore(info:string){
     this.router.navigateByUrl('/description');
+    this.service.sendInfo(info);
   }
 
 }

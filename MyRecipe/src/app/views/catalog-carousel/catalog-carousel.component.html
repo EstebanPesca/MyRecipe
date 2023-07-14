@@ -1,25 +1,41 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="carouselExampleCaptions" *ngFor="let recipe of recipes; let i = index" [attr.data-slide-to]="i" ngClass="{ 'active': i === 0 }"></li>
-  </ol>
+<div class="container-fluid py-3 bg-dark">
 
-  <div class="carousel-inner">
-    <div class="carousel-item" *ngFor="let recipe of recipes; let i = index" ngClass="{ 'active': i === 0 }">
-      <img src="{{recipe.image}}" class="d-block w-100" alt="{{recipe.name}}">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{recipe.name}}</h5>
-        <p>{{recipe.description}}</p>
-      </div>
-    </div>
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Catalogo 2</li>
+      </ol>
+    </nav>
   </div>
 
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Siguiente</span>
-  </a>
+  <div class="container py-5 bg-info">
 
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="carouselExampleCaptions" *ngFor="let recipe of recipes; let i = index" [attr.data-slide-to]="i" ngClass="{ 'active': i === 0 }"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let recipe of recipes; let i = index" ngClass="{ 'active': i === 0 }">
+          <img src="{{recipe.image}}" class="d-block w-100" alt="{{recipe.name}}">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{recipe.name}}</h5>
+            <p>{{recipe.description}}</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+
+    </div>
+
+  </div>
 </div>

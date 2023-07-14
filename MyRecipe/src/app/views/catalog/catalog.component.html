@@ -1,4 +1,13 @@
-<div class="container-fluid" style="background-color: #F1F1F1;">
+<div class="container-fluid py-3" style="background-color: #F1F1F1;">
+
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Catalogo 1</li>
+      </ol>
+    </nav>
+  </div>
+
   <div class="container py-5" id="catalog">
     <div class="row row-cols-1 row-cols-md-4">
 
@@ -11,7 +20,7 @@
               <p class="card-text fs-6">{{recipe.description}}</p>
             </div>
             <div class="card-footer">
-              <small class="card-info"><a class="link-primary" (click)="viewMore(recipe.name)">Ver más...</a></small>
+              <small class="card-info"><a class="link-primary" (click)="viewMore(recipe.name)">Leer más...</a></small>
             </div>
           </div>
         </div>
@@ -19,4 +28,5 @@
 
     </div>
   </div>
+
 </div>

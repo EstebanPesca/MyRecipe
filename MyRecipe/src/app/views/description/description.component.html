@@ -1,1 +1,30 @@
-<p>description works!</p>
+<div class="container-fluid py-3" style="background-color: #F1F1F1;">
+
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="">Catalogo</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Descripcion</li>
+      </ol>
+    </nav>
+  </div>
+
+
+  <div class="container py-1 my-4">
+    <div *ngFor="let recipe of infoRecipe">
+      <div class="row">
+        <div class="col-md-6 align-self-center">
+          <img src="{{recipe.image}}" alt="recipe.name" class="img-fluid">
+        </div>
+        <div class="col-md-6 align-self-start">
+          <h2>{{recipe.name}}</h2>
+          <p>{{recipe.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
