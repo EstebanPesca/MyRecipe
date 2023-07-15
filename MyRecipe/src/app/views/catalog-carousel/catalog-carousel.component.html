@@ -21,8 +21,10 @@
 
 
       <div class="carousel-inner bg-dark p-0 m-0">
-        <div class="carousel-item" *ngFor="let recipe of recipes; let i = index" [ngClass]="{ 'active': i === 0 }" style="height: 75vh;">
-          <img [src]="recipe.image" class="arreglar-imagen" alt="{{recipe.name}}">
+        <div class="carousel-item ctn-container-item h-auto" *ngFor="let recipe of recipes; let i = index" [ngClass]="{ 'active': i === 0 }">
+          <div class="ctn-image-detail">
+            <img [src]="recipe.image" class="image-detail" alt="{{recipe.name}}">
+          </div>
           <div class="carousel-caption d-md-block bg-dark" style="--bs-bg-opacity: .5;">
             <h5 class="opacity-100">{{recipe.name}}</h5>
             <p>{{recipe.description}}</p>

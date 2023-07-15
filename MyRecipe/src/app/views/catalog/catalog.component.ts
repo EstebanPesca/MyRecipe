@@ -17,7 +17,7 @@ export class CatalogComponent {
   public viewMore(info:string){
     this.router.navigateByUrl('/description');
     this.service.sendInfo(info);
-    this.service.setPathOrigin('Catalogo','/catalog')
+    this.service.setPathOrigin('Catalogo 1','/catalog')
   }
 
 }

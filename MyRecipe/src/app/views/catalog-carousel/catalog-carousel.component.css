@@ -1,5 +1,20 @@
-.arreglar-imagen{
+
+.ctn-image-detail{
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.image-detail{
+  width: 100%;
+}
+
+
+@media (max-width: 425px) {
+
+  .image-detail{
+    width: auto;
+  }
+
 }
