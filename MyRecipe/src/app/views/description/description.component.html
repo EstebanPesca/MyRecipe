@@ -1,4 +1,4 @@
-<div class="container-fluid py-3" style="background-color: #F1F1F1;">
+<div class="container-fluid py-3 ctn-principal">
 
   <div class="container-fluid">
     <nav aria-label="breadcrumb">
@@ -20,7 +20,10 @@
         </div>
         <div class="col-md-6 align-self-start">
           <h2>{{recipe.name}}</h2>
-          <p>{{recipe.description}}</p>
+          <p>{{recipe.recipe}}</p>
+          <div *ngFor="let ingredient of recipe.ingredients">
+            <span [innerText]="ingredient"></span>
+          </div>
         </div>
       </div>
     </div>

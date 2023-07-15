@@ -1,6 +1,21 @@
+.ctn-principal{
+  height: calc(100vh - 286px);
+  min-height: 612px;
+  background-color: #F1F1F1;
+}
+
 .cnt-image-detail{
   height: 500px;
   overflow: hidden;
   display: flex;
   justify-content: center;
+}
+
+
+@media (max-width: 767px){
+
+  .ctn-principal{
+    height: auto;
+  }
+
 }

@@ -1,3 +1,6 @@
+.ctn-principal{
+  background-color: #F1F1F1;
+}
 
 .ctn-image-detail{
   height: 100vh;
@@ -6,12 +9,8 @@
   justify-content: center;
 }
 
-.image-detail{
-  width: 100%;
-}
 
-
-@media (max-width: 425px) {
+@media (max-width: 768px) {
 
   .image-detail{
     width: auto;
