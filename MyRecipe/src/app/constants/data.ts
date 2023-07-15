@@ -1,5 +1,7 @@
 import { CatalogData } from "../interface/data";
 
+// Exporting data with information aboout every recipe, name, url-image, description, process and ingredients
+
 export const contentCatalog: CatalogData[] = [
   {
     name: 'Hamburguesas',

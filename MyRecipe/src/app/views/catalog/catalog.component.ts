@@ -10,9 +10,13 @@ import { CatalogInfoService } from 'src/app/services/catalog/catalog-info.servic
 })
 export class CatalogComponent {
 
+  // calling the data structure
+
   public recipes = contentCatalog;
 
   constructor (private router:Router, private service:CatalogInfoService){}
+
+  // sending the data's recipe and the path's name and the path
 
   public viewMore(info:string){
     this.router.navigateByUrl('/description');

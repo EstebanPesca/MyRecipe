@@ -1,5 +1,7 @@
 <div class="container-fluid py-3 ctn-principal">
 
+  <!-- Breadcrumb catalog 2 -->
+
   <div class="container-fluid">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -10,7 +12,11 @@
 
   <div class="container p-0">
 
+    <!-- catalog 2 -->
+
     <div id="carouselExampleCaptions" class="carousel slide">
+
+      <!-- made a for focus to read the index and show with buttons the correct recipe -->
 
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions"
@@ -18,7 +24,7 @@
         *ngFor="let recipe of recipes; let i = index" [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 0 }"></button>
       </div>
 
-
+      <!-- Carousel with a for, the for show the img, name and a little description about the recipe -->
 
       <div class="carousel-inner bg-dark p-0 m-0">
         <div class="carousel-item ctn-container-item h-auto" *ngFor="let recipe of recipes; let i = index" [ngClass]="{ 'active': i === 0 }">
@@ -32,6 +38,8 @@
           </div>
         </div>
       </div>
+
+      <!-- buttons for see the next and previous recipe -->
 
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

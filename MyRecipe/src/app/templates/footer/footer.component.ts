@@ -9,6 +9,8 @@ export class FooterComponent {
 
   constructor(){}
 
+  // urls catalogs
+
   public catalog : string = '/catalog';
   public catalogCarousel : string = '/catalog/carousel';
 

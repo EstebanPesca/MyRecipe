@@ -14,6 +14,8 @@ export class CatalogCarouselComponent {
 
   constructor(private router:Router, private service:CatalogInfoService){}
 
+  // sending the data's recipe and the path's name and the path
+
   public moreDescription(info: string){
     this.router.navigateByUrl('/description');
     this.service.sendInfo(info);

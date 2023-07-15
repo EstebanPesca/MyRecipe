@@ -4,6 +4,8 @@ import { CatalogComponent } from './views/catalog/catalog.component';
 import { DescriptionComponent } from './views/description/description.component';
 import { CatalogCarouselComponent } from './views/catalog-carousel/catalog-carousel.component';
 
+// routing every screen
+
 const routes: Routes = [
   {path: '', component: CatalogComponent},
   {path: 'catalog', component:CatalogComponent},

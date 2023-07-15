@@ -17,8 +17,13 @@ export class DescriptionComponent {
 
   ngOnInit(): void{
 
+    // getting all the information about the recipes
     this.infoRecipe = this.service.returnInfo();
+    // getting the path's name and the path
     this.pathOrigin = this.service.getPathOrigin();
+
+    // this if, valid if the user reload the page, this comeback to the first catalog
+    // and if he tries to go to the url without a previous path, he comebacks to the catalog
 
     if(!this.pathOrigin.path){
       this.router.navigateByUrl('/catalog');

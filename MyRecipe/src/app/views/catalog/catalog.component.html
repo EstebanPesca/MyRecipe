@@ -1,5 +1,7 @@
 <div class="container-fluid py-3" style="background-color: #F1F1F1;">
 
+  <!-- Breadcrumb catalog 1 -->
+
   <div class="container-fluid">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -8,8 +10,12 @@
     </nav>
   </div>
 
+  <!-- Catalog 1 -->
+
   <div class="container py-5" id="catalog">
     <div class="row row-cols-1 row-cols-md-4">
+
+      <!-- for used to read every recipe -->
 
       <div *ngFor="let recipe of recipes">
         <div class="col py-1 m-0">
@@ -22,6 +28,7 @@
               <p class="card-text fs-6">{{recipe.description}}</p>
             </div>
             <div class="card-footer">
+              <!-- evento (click) call the description -->
               <small class="card-info"><a class="link-primary" (click)="viewMore(recipe.name)">Leer más...</a></small>
             </div>
           </div>
