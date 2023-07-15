@@ -1,0 +1,6 @@
+.ctn-image-detail{
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}

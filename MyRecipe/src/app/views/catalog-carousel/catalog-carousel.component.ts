@@ -15,8 +15,9 @@ export class CatalogCarouselComponent {
   constructor(private router:Router, private service:CatalogInfoService){}
 
   public moreDescription(info: string){
-    this.router.navigateByUrl('/catalog');
+    this.router.navigateByUrl('/description');
     this.service.sendInfo(info);
+    this.service.setPathOrigin('Catalogo 2','/catalog/carousel');
   }
 
 }

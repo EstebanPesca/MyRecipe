@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CatalogData } from 'src/app/interface/data';
+import { CatalogData, pathOrigin } from 'src/app/interface/data';
 import { CatalogInfoService } from 'src/app/services/catalog/catalog-info.service';
 
 @Component({
@@ -11,14 +11,18 @@ import { CatalogInfoService } from 'src/app/services/catalog/catalog-info.servic
 export class DescriptionComponent {
 
   public infoRecipe: CatalogData[] = [];
-  public href: string = '';
+  public pathOrigin?: pathOrigin;
 
-  constructor(private ruoter:Router, private service: CatalogInfoService){}
-
-  // catalog = "";
+  constructor(private router:Router, private service: CatalogInfoService){}
 
   ngOnInit(): void{
+
     this.infoRecipe = this.service.returnInfo();
+    this.pathOrigin = this.service.getPathOrigin();
+
+    if(!this.pathOrigin.path){
+      this.router.navigateByUrl('/catalog');
+    }
   }
 
 }

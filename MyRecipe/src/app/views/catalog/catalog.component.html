@@ -14,7 +14,9 @@
       <div *ngFor="let recipe of recipes">
         <div class="col py-1 m-0">
           <div class="card">
-            <img src="{{recipe.image}}" class="card-img-top" alt="{{recipe.name}}" width="290" height="300">
+            <div class="p-0 m-0 ctn-image-detail">
+              <img src="{{recipe.image}}" class="card-img-top w-auto h-100" alt="{{recipe.name}}">
+            </div>
             <div class="card-body">
               <h5 class="card-title fw-bold fst-italic text-truncate text-sm">{{recipe.name}}</h5>
               <p class="card-text fs-6">{{recipe.description}}</p>

@@ -1,3 +1,6 @@
-.image-recipe{
-  height: 70vh;
+.cont-image-detail{
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
