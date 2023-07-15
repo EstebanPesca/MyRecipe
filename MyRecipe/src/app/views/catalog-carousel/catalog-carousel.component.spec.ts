@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CatalogCarouselComponent } from './catalog-carousel.component';
 
+
 describe('CatalogCarouselComponent', () => {
   let component: CatalogCarouselComponent;
   let fixture: ComponentFixture<CatalogCarouselComponent>;
@@ -18,4 +19,5 @@ describe('CatalogCarouselComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

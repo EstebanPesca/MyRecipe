@@ -10,27 +10,27 @@
     </nav>
   </div>
 
+
+
+
   <div class="container p-0">
 
     <!-- catalog 2 -->
 
-    <div id="carouselExampleCaptions" class="carousel slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
 
       <!-- made a for focus to read the index and show with buttons the correct recipe -->
 
-      <div class="carousel-indicators">
+      <div class="carousel-indicators" style="margin-bottom: 50px;">
         <button type="button" data-bs-target="#carouselExampleCaptions"
         [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"
         *ngFor="let recipe of recipes; let i = index" [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 0 }"></button>
       </div>
 
       <!-- Carousel with a for, the for show the img, name and a little description about the recipe -->
-
-      <div class="carousel-inner p-0 m-0">
-        <div class="carousel-item ctn-container-item h-auto" *ngFor="let recipe of recipes; let i = index" [ngClass]="{ 'active': i === 0 }">
-          <div class="ctn-image-detail">
-            <img [src]="recipe.image" class="image-detail" alt="{{recipe.name}}">
-          </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" *ngFor="let recipe of recipes; let i = index" [ngClass]="{ 'active': i === 0 }">
+          <img [src]="recipe.image" class="d-block w-100 ctn-image-detail" alt="{{recipe.name}}">
           <div class="carousel-caption d-md-block" style="--bs-bg-opacity: .5;">
             <h5 class="opacity-100">{{recipe.name}}</h5>
             <p>{{recipe.description}}</p>
@@ -41,14 +41,14 @@
 
       <!-- buttons for see the next and previous recipe -->
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      </a>
+      <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-      </button>
+      </a>
 
     </div>
 

@@ -5,7 +5,7 @@ import { CatalogData } from "../interface/data";
 export const contentCatalog: CatalogData[] = [
   {
     name: 'Hamburguesas',
-    image: '../../../assets/hamburguesas.webp',
+    image: '../../../assets/hamburguesas.jpg',
     description: 'Receta de cómo preparar una hamburguesa',
     recipe: 'Para realizar una hamburguesa, necesitaremos carne molida, pan y queso. Si deseas colocar algo adicional a tu hamburguesa (pepinillos, huevos, beicon, piña), eres libre de hacerlo.',
     ingredients: [
