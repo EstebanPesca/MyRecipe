@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+    // urls catalogs
+
+    public catalog : string = '/catalog';
+    public catalogCarousel : string = '/catalog/carousel';
+
 }

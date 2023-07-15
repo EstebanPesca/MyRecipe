@@ -1,8 +1,8 @@
 <!-- Header -->
 
-<nav class="navbar pb-2 navbar-expand-lg" style="background-color: #C6C5B9;">
+<nav class="navbar pb-2 navbar-expand-lg header-nav">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/catalog">
+    <a class="navbar-brand" routerLink="{{catalog}}">
       <img src="../../../assets/cocinero.png" alt="Logo" width="40" height="40" class="m-2">
       Home
     </a>
@@ -16,9 +16,9 @@
             Catalogos
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="catalog">Catalogo 1</a></li>
+            <li><a class="dropdown-item" routerLink="{{catalog}}">Catalogo 1</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="catalog/carousel">Catalogo 2</a></li>
+            <li><a class="dropdown-item" routerLink="{{catalogCarousel}}">Catalogo 2</a></li>
           </ul>
         </li>
       </ul>

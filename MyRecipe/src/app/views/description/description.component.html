@@ -24,6 +24,7 @@
         <div class="col-md-6 align-self-start">
           <h2>{{recipe.name}}</h2>
           <p>{{recipe.recipe}}</p>
+          <!-- Made another for, in this case, this give the ingredients -->
           <div *ngFor="let ingredient of recipe.ingredients">
             <span [innerText]="ingredient"></span>
           </div>

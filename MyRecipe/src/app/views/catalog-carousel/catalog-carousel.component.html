@@ -26,12 +26,12 @@
 
       <!-- Carousel with a for, the for show the img, name and a little description about the recipe -->
 
-      <div class="carousel-inner bg-dark p-0 m-0">
+      <div class="carousel-inner p-0 m-0">
         <div class="carousel-item ctn-container-item h-auto" *ngFor="let recipe of recipes; let i = index" [ngClass]="{ 'active': i === 0 }">
           <div class="ctn-image-detail">
             <img [src]="recipe.image" class="image-detail" alt="{{recipe.name}}">
           </div>
-          <div class="carousel-caption d-md-block bg-dark" style="--bs-bg-opacity: .5;">
+          <div class="carousel-caption d-md-block" style="--bs-bg-opacity: .5;">
             <h5 class="opacity-100">{{recipe.name}}</h5>
             <p>{{recipe.description}}</p>
             <a class="btn btn-dark" (click)="moreDescription(recipe.name)">Leer más...</a>
